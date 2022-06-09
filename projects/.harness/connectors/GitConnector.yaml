@@ -1,0 +1,24 @@
+connector:
+  name: GitConnector
+  identifier: GitConnector
+  description:
+  orgIdentifier: default
+  projectIdentifier: proj2
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt16
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Vikas
+          tokenRef: account.PatForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.PatForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
