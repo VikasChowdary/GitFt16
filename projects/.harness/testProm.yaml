@@ -1,0 +1,13 @@
+connector:
+  name: testProm
+  identifier: testProm
+  description:
+  orgIdentifier: default
+  projectIdentifier: proj2
+  type: Artifactory
+  spec:
+    artifactoryServerUrl: test.com
+    auth:
+      type: Anonymous
+    delegateSelectors:
+    - acctgroup
