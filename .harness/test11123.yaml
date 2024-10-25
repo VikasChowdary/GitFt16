@@ -1,0 +1,30 @@
+pipeline:
+  name: test11123
+  identifier: test11123
+  projectIdentifier: testGitSync
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: adf
+        identifier: adf
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "hiWithDelegate"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
