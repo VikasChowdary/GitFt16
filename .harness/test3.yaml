@@ -1,0 +1,30 @@
+pipeline:
+  name: test3
+  identifier: test3
+  projectIdentifier: testGitSync
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: adfa
+        identifier: adfa
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "hit"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
